@@ -1,0 +1,79 @@
+ELECT * 
+FROM `english-premier-league-357101.EPL.20_21`
+
+Analyze
+
+--Nationalities of the league
+
+SELECT
+Nationality,
+COUNT(Name) AS Number_of_players
+FROM 
+`english-premier-league-357101.EPL.20_21`
+GROUP BY
+Nationality
+ORDER BY
+Nationality ASC
+
+--Number of players from each club
+
+SELECT
+Club,
+COUNT(Name) AS Number_of_players
+FROM
+`english-premier-league-357101.EPL.20_21`
+GROUP BY
+Club
+ORDER BY
+Club ASC
+
+--Goals by player
+
+SELECT 
+Name,
+Club,
+Goals
+FROM 
+`english-premier-league-357101.EPL.20_21`
+ORDER BY
+Goals DESC
+LIMIT 10
+
+--Assists by player
+
+SELECT
+Name,
+Club,
+Assists
+FROM 
+`english-premier-league-357101.EPL.20_21`
+ORDER BY
+Assists DESC
+LIMIT
+10
+
+--Goals by club
+
+SELECT
+Club,
+SUM(Goals) AS Number_goals
+FROM 
+`english-premier-league-357101.EPL.20_21`
+GROUP BY
+Club
+ORDER BY
+Number_goals DESC
+
+--Expected goals of players
+
+SELECT
+Name,
+Club,
+xG
+FROM `english-premier-league-357101.EPL.20_21`
+WHERE 
+xG < 1
+ORDER BY
+xG DESC
+LIMIT 
+10
