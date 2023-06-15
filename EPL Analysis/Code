@@ -1,4 +1,4 @@
-ELECT * 
+SELECT * 
 FROM `english-premier-league-357101.EPL.20_21`
 
 Analyze
