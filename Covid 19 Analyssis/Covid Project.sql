@@ -2,7 +2,7 @@
 
 Date Range: FROM 1st January, 2020 t0 5th November, 2022.
 
-Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
 */
 
 -- ANALYSIS OF COVID DATA FROM 1st January, 2020 t0 5th November, 2022.
